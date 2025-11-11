@@ -14,15 +14,16 @@
     <!-- Qlik Embed SDK -->
     <!-- data-redirect-uri="http://localhost/embed-test" -->
     <!-- data-redirect-uri="https://embed-test-production.up.railway.app" -->
+
+    <!-- data-access-token-storage="session"
+      data-redirect-uri="https://embed-test-production.up.railway.app"
+      data-auto-redirect="true" -->
     <script
       type="application/javascript"
       data-auth-type="Oauth2"
       src="https://unpkg.com/@qlik/embed-web-components"
       data-host="spdatacapacity.de.qlikcloud.com"
       data-client-id="c81b1b3ec8eed9d5b285c398b2c5d05e"
-      data-access-token-storage="session"
-      data-redirect-uri="https://embed-test-production.up.railway.app"
-      data-auto-redirect="true"
     ></script>
   </head>
   <body>
@@ -62,6 +63,25 @@
       <footer>
         <p>Powered by Qlik Embed SDK</p>
       </footer>
+
+          <!-- <div class="iframe_container">
+        <iframe 
+            src="https://service-qlik-cloud.up.railway.app" 
+            sandbox="allow-scripts allow-same-origin" 
+            style="width: 100%; height: 600px; border: 1px solid #ccc;">
+        </iframe>
+    </div> -->
+
+    <!-- 
+     <div class="iframe_container" style="width: 100%; height: 95vh;">
+        <iframe 
+            src="https://embed-test-production.up.railway.app" 
+            sandbox="allow-scripts allow-same-origin" 
+            style="width: 100%; height: 100%; border: 1px solid #ccc;">
+        </iframe>
+    </div>
+    -->
+
     </div>
   </body>
 </html>
