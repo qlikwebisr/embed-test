@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qlik Embed Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Qlik Embed SDK -->
+    <script
+        type="application/javascript"
+        data-auth-type="Oauth2"
+        src="https://unpkg.com/@qlik/embed-web-components"
+        data-host="spdatacapacity.de.qlikcloud.com"
+        data-client-id="c81b1b3ec8eed9d5b285c398b2c5d05e"
+        data-redirect-uri="http://localhost/embed-test"
+        data-access-token-storage="session"
+        data-auto-redirect="true">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Qlik Embed Dashboard</h1>
+        </header>
+
+        <main>
+            <section class="visualization-container">
+                <h2>Visualization</h2>
+                <div id="qlik-object">
+                    <qlik-embed
+                        id="qlik-embed-object"
+                        ui="classic/chart"
+                        app-id="20e8a199-3947-471d-b6f1-95a088196a0c"
+                        object-id="beba2c07-1274-4869-b3ba-92e9379ce03f">
+                    </qlik-embed>
+                </div>
+            </section>
+
+            <section class="info-container">
+                <h3>Connection Details</h3>
+                <ul>
+                    <li><strong>Tenant:</strong> spdatacapacity.de.qlikcloud.com</li>
+                    <li><strong>App ID:</strong> 20e8a199-3947-471d-b6f1-95a088196a0c</li>
+                    <li><strong>Object ID:</strong> beba2c07-1274-4869-b3ba-92e9379ce03f</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by Qlik Embed SDK</p>
+        </footer>
+    </div>
+
+    <div class="iframe_container">
+        <iframe 
+            src="https://service-qlik-cloud.up.railway.app" 
+            sandbox="allow-scripts allow-same-origin" 
+            style="width: 100%; height: 600px; border: 1px solid #ccc;">
+        </iframe>
+    </div>
+
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
