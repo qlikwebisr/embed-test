@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nginx"]
+
+[phases.install]
+cmds = ["echo 'No install needed'"]
+
+[start]
+cmd = "nginx -g 'daemon off;' -c /app/nginx.conf"
